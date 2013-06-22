@@ -25,4 +25,8 @@ public interface JOSObject<Native extends Object , Hosted extends JOSObject<Nati
 	public static Class<?> NATIVE_TYPE = Object.class;
 	public static Class<?> HOSTED_TYPE = Object.class;
 	
+	public static final byte VERSION_SPEC = 14;
+	public static final byte VERSION_SOURCE = 14;
+	public static final byte VERSION_FORMAT = 12;
+	
 }

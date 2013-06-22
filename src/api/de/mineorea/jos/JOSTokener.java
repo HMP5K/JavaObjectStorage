@@ -3,21 +3,35 @@ package de.mineorea.jos;
 import java.io.File;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.concurrent.locks.Lock;
 
 import de.mineorea.jos.object.JOSCompound;
+import de.mineorea.src.jos.object.srcJOSCompound;
+import de.mineorea.src.jos.tokener.JavaSerJOSTokener;
 
 public abstract class JOSTokener {
 	
 	public static JOSTokener newTokener(JOSFormat format) throws JOSTokenerNotFoundException{
-		return null; //TODO de.mineorea.src.jos.cJOSTokener
+		switch(format){
+		case JAVA_SERIALIZATION:
+			return new JavaSerJOSTokener();
+		default:
+			throw new JOSTokenerNotFoundException("JOSTokener not found!" , format);
+		}
 	}
+	
+	public static JOSCompound newCompound(){
+		return new srcJOSCompound(null);
+	}
+	
+	public abstract Lock getLock();
 	
 	public abstract String getName();
 	
 	public abstract byte version();
 	public abstract JOSTokener version(byte version);
 	
-	public abstract boolean gzpi();
+	public abstract boolean gzip();
 	public abstract JOSTokener gzip(boolean gzip);
 	
 	public abstract boolean verbose();
@@ -39,16 +53,8 @@ public abstract class JOSTokener {
 	
 	public static enum JOSFormat
 	{
-		DEFAUTL,
-		MINIFIED,
-		MAXIMAL,
-		BINARY,
-		
-		__PROTOTYPE_0x001, //XML
-		__PROTOTYPE_0x002, //JSON
-		__PROTOTYPE_0x003, //INI
-		__PROTOTYPE_0x004, //Java Serialization
-		__PROTOTYPE_0x005, //BINARY with Network Optimization
+		JAVA_SERIALIZATION,
+		// TODO Formats: JOS, MJOS, BINARY
 		;
 		JOSFormat(){
 			

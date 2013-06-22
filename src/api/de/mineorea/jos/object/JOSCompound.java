@@ -1,5 +1,6 @@
 package de.mineorea.jos.object;
 
+import java.util.HashMap;
 import java.util.Map.Entry;
 
 import javax.annotation.Generated;
@@ -11,33 +12,25 @@ import de.mineorea.jos.array.JOSFloatArray;
 import de.mineorea.jos.array.JOSIntegerArray;
 import de.mineorea.jos.array.JOSLongArray;
 import de.mineorea.jos.array.JOSShortArray;
+import de.mineorea.jos.array.JOSStringArray;
 
 public interface JOSCompound extends JOSObject<JOSObject<? , ?> , JOSCompound>, Iterable<Entry<String , JOSObject<? , ?>>>{
 
 	public abstract JOSCompound getParent();
 	public abstract void clear();
+	public abstract HashMap<String , JOSObject<? , ?>> getObjects();
+	
+	public abstract String toString();
 	
 	@Generated({ "de.mineorea.tools.generator.UtilGenerator"})
 	abstract <Native, Hosted extends JOSObject<Native, Hosted>> JOSObject<Native , Hosted> 
 		_get( String name , Class<Native> NativeType, Class<Hosted> ReturnType );
-
-	@Generated({ "de.mineorea.tools.generator.UtilGenerator"})
-	abstract <Native, Hosted extends JOSObject<Native, Hosted>> JOSObject<Native , Hosted> 
-		_set( String name , Class<Native> NativeType , Class<Hosted> ReturnType , Native Value );
-	
-	@Generated({ "de.mineorea.tools.generator.UtilGenerator"})
-	abstract <Native, Hosted extends JOSObject<Native , Hosted> , srcNative , srcHosted extends JOSObject<srcNative , srcHosted>> JOSObject<Native , Hosted> 
-		_cast( Class<srcNative> Native , Class<srcHosted> Hosted , JOSObject<srcNative , srcHosted> source );
-	
-	@Generated({ "de.mineorea.tools.generator.UtilGenerator"})
-	abstract <Native, Hosted extends JOSObject<Native , Hosted>> JOSObject<Native , Hosted> 
-		_new( String name , Class<Native> NativeType, Class<Hosted> ReturnType , Native value);
-
 	
 	//Object
 	public abstract JOSObject<? , ?> getObject(String name);
 	public abstract boolean setObject(String name , JOSObject<?, ?> value);
 	public abstract boolean containsObject(String name);
+	public abstract JOSObject<? , ?> deleteObject(String name);
 	
 	//Compound
 	public abstract JOSCompound getCompound(String name);
@@ -140,4 +133,9 @@ public interface JOSCompound extends JOSObject<JOSObject<? , ?> , JOSCompound>, 
 	public abstract boolean         setBooleanArray(String name, Boolean...value);
 	public abstract boolean         containsBooleanArray(String name);
 	
+	//String Array
+	public abstract JOSStringArray getStringArray(String name);
+	public abstract boolean        setStringArray(String name, JOSStringArray value);
+	public abstract boolean        setStringArray(String name, String...value);
+	public abstract boolean        containsStringArray(String name);
 }
