@@ -7,12 +7,15 @@ import java.util.concurrent.locks.Lock;
 
 import de.mineorea.jos.object.JOSCompound;
 import de.mineorea.src.jos.object.srcJOSCompound;
+import de.mineorea.src.jos.tokener.JOSDefaultJOSTokener;
 import de.mineorea.src.jos.tokener.JavaSerJOSTokener;
 
 public abstract class JOSTokener {
 	
 	public static JOSTokener newTokener(JOSFormat format) throws JOSTokenerNotFoundException{
 		switch(format){
+		case JOS:
+			return new JOSDefaultJOSTokener();
 		case JAVA_SERIALIZATION:
 			return new JavaSerJOSTokener();
 		default:
@@ -53,7 +56,7 @@ public abstract class JOSTokener {
 	
 	public static enum JOSFormat
 	{
-		JAVA_SERIALIZATION,
+		JAVA_SERIALIZATION, JOS,
 		// TODO Formats: JOS, MJOS, BINARY
 		;
 		JOSFormat(){
