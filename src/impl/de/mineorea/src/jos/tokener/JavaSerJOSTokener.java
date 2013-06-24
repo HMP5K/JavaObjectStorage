@@ -105,6 +105,7 @@ public final class JavaSerJOSTokener extends JOSTokener {
 
 	@Override
 	public void save(JOSCompound data, OutputStream out1) throws JOSException {
+		lock.lock();
 		log("Saving <" + data.getName() + "> using: GZIP=" + this.gzip + " VERSION=" + this.version + " META=?");
 		ObjectOutputStream out = null;
 		try {
@@ -117,15 +118,19 @@ public final class JavaSerJOSTokener extends JOSTokener {
 			out.writeObject(data);
 			log("Done!");
 		} catch (Exception e) {
+			lock.unlock();
 			throw new JOSException("IO Failed!" , e);
 		}finally{
 			if(out != null)
 				try {
+
 					out.close();
 				} catch (IOException e) {
+					lock.unlock();
 					throw new JOSException("IO Failed!" , e);
 				}
-		}
+		}					
+		lock.unlock();
 	}
 		
 

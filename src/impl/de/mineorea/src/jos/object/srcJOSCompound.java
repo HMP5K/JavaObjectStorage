@@ -58,7 +58,7 @@ public class srcJOSCompound implements JOSCompound {
 	private static final long serialVersionUID = 1L;
 
 	private srcJOSCompound root;
-	private HashMap<String , JOSObject<?,?>> DATA = new HashMap<String , JOSObject<?,?>>();
+	public HashMap<String , JOSObject<?,?>> DATA = new HashMap<String , JOSObject<?,?>>();
 	
 	public srcJOSCompound(){
 		this(null , null);
@@ -80,7 +80,7 @@ public class srcJOSCompound implements JOSCompound {
 
 	@Override
 	public JOSObject<?, ?> getValue() {
-		throw new JOSException("Not Supported!" , this);
+		return this;
 	}
 
 	@Override
