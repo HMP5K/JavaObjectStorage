@@ -252,7 +252,7 @@ public final class JOSDefaultObjectConverter implements ObjectConverter {
 
 	@Override
 	public String[] doArray(JOSArray<?, ?> array) {
-		String[] strings = new String[array.lenght()]; // TODO Better Converter
+		String[] strings = new String[array.lenght()];
 		Object[] data = array.getValue();
 		if(data == null) return null;
 		for(int i = 0 ; i < data.length ; i++){
@@ -400,8 +400,7 @@ public final class JOSDefaultObjectConverter implements ObjectConverter {
 
 	    return result;
 	}
-	
-	
+		
 	public void report(String message){
 		throw new JOSException(message);
 	}

@@ -1,7 +1,6 @@
 package de.mineorea.jos.object;
 
-
-
+//TODO Documentation
 public interface JOSLong extends JOSObject<Long ,  JOSLong>{
 
 	public abstract long getPrimitiveValue();

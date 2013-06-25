@@ -1,6 +1,6 @@
 package de.mineorea.jos.object;
 
-
+//TODO Documentation
 public interface JOSCharacter extends JOSObject<Character , JOSCharacter> {
 
 	public abstract char getPrimitiveValue();

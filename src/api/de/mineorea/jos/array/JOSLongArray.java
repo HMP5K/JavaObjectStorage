@@ -1,5 +1,6 @@
 package de.mineorea.jos.array;
 
+//TODO Documentation
 public interface JOSLongArray extends JOSArray<Long , JOSLongArray>{
 
 	public abstract long[] getPrimitiveValue();

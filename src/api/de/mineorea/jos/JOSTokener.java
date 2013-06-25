@@ -6,13 +6,16 @@ import java.io.OutputStream;
 import java.util.concurrent.locks.Lock;
 
 import de.mineorea.jos.object.JOSCompound;
+import de.mineorea.jos.tools.JOSBinder;
 import de.mineorea.src.jos.object.srcJOSCompound;
 import de.mineorea.src.jos.tokener.JOSDefaultJOSTokener;
 import de.mineorea.src.jos.tokener.JavaSerJOSTokener;
+import de.mineorea.src.jos.tools.srcJOSBinder;
 
+//TODO Documentation
 public abstract class JOSTokener {
 	
-	public static JOSTokener newTokener(JOSFormat format) throws JOSTokenerNotFoundException{
+	public static final JOSTokener newTokener(JOSFormat format) throws JOSTokenerNotFoundException{
 		switch(format){
 		case JOS:
 			return new JOSDefaultJOSTokener();
@@ -23,7 +26,11 @@ public abstract class JOSTokener {
 		}
 	}
 	
-	public static JOSCompound newCompound(){
+	public static final JOSBinder newBinder(){
+		return new srcJOSBinder();
+	}
+	
+	public static final JOSCompound newCompound(){
 		return new srcJOSCompound(null);
 	}
 	
@@ -57,7 +64,7 @@ public abstract class JOSTokener {
 	public static enum JOSFormat
 	{
 		JAVA_SERIALIZATION, JOS,
-		// TODO Formats: JOS, MJOS, BINARY
+		
 		;
 		JOSFormat(){
 			

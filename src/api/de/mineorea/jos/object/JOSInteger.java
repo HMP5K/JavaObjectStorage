@@ -1,7 +1,7 @@
 package de.mineorea.jos.object;
 
 
-
+//TODO Documentation
 public interface JOSInteger extends JOSObject<Integer , JOSInteger> {
 
 	public abstract int getPrimitiveValue();

@@ -1,7 +1,6 @@
 package de.mineorea.jos.object;
 
-
-
+//TODO Documentation
 public interface JOSByte extends JOSObject<Byte , JOSByte>{
 
 	public abstract byte getPrimitiveValue();

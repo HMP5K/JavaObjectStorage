@@ -1,7 +1,6 @@
 package de.mineorea.jos.object;
 
-
-
+//TODO Documentation
 public interface JOSShort extends JOSObject<Short , JOSShort> {
 
 	public abstract short getPrimitiveValue();

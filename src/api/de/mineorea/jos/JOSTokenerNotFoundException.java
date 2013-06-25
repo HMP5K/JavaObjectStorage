@@ -2,6 +2,7 @@ package de.mineorea.jos;
 
 import de.mineorea.jos.JOSTokener.JOSFormat;
 
+// TODO Documentation
 public final class JOSTokenerNotFoundException extends JOSException {
 
 	private static final long serialVersionUID = -1256086304294386994L;

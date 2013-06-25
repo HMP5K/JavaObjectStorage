@@ -1,5 +1,6 @@
 package de.mineorea.jos.array;
 
+//TODO Documentation
 public interface JOSFloatArray extends JOSArray<Float , JOSFloatArray>{
 
 	public abstract float[] getPrimitiveValue();

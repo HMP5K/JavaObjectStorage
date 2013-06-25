@@ -1,5 +1,6 @@
 package de.mineorea.jos.array;
 
+//TODO Documentation
 public interface JOSBooleanArray extends JOSArray<Boolean , JOSBooleanArray>{
 
 	public abstract boolean[] getPrimitiveValue();

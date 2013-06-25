@@ -1,5 +1,6 @@
 package de.mineorea.jos.array;
 
+//TODO Documentation
 public interface JOSStringArray extends JOSArray<String , JOSStringArray>{
 	
 	public abstract int getEncoding();

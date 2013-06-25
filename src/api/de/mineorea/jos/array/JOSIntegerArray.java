@@ -1,5 +1,6 @@
 package de.mineorea.jos.array;
 
+//TODO Documentation
 public interface JOSIntegerArray extends JOSArray<Integer , JOSIntegerArray>{
 
 	public abstract int[] getPrimitiveValue();

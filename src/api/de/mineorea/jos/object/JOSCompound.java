@@ -14,6 +14,7 @@ import de.mineorea.jos.array.JOSLongArray;
 import de.mineorea.jos.array.JOSShortArray;
 import de.mineorea.jos.array.JOSStringArray;
 
+//TODO Documentation
 public interface JOSCompound extends JOSObject<JOSObject<? , ?> , JOSCompound>, Iterable<Entry<String , JOSObject<? , ?>>>{
 
 	public abstract JOSCompound getParent();

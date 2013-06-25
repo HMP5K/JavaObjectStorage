@@ -1,6 +1,6 @@
 package de.mineorea.jos.object;
 
-
+//TODO Documentation
 public interface JOSString extends JOSObject<String , JOSString> {
 
 	public abstract char[] getChars();

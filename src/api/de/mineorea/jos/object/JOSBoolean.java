@@ -1,6 +1,6 @@
 package de.mineorea.jos.object;
 
-
+//TODO Documentation
 public interface JOSBoolean extends JOSObject<Boolean, JOSBoolean> {
 
 	public abstract boolean getPrimitiveValue();

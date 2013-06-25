@@ -1,6 +1,6 @@
 package de.mineorea.jos.object;
 
-
+//TODO Documentation
 public interface JOSDouble extends JOSObject<Double, JOSDouble> {
 
 	public abstract double getPrimitiveValue();

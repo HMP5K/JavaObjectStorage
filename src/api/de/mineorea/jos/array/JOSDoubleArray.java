@@ -1,5 +1,6 @@
 package de.mineorea.jos.array;
 
+//TODO Documentation
 public interface JOSDoubleArray extends JOSArray<Double , JOSDoubleArray>{
 
 	public abstract double[] getPrimitiveValue();

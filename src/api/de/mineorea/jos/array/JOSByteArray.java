@@ -1,6 +1,6 @@
 package de.mineorea.jos.array;
 
-
+//TODO Documentation
 public interface JOSByteArray extends JOSArray<Byte , JOSByteArray>{
 
 	public abstract byte[] getPrimitiveValue();

@@ -2,6 +2,7 @@ package de.mineorea.jos;
 
 import de.mineorea.jos.object.JOSObject;
 
+//TODO Documentation
 public class JOSException extends RuntimeException {
 	
 	private static final long serialVersionUID = -1950079013673296616L;

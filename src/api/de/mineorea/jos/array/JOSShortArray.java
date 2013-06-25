@@ -1,5 +1,6 @@
 package de.mineorea.jos.array;
 
+//TODO Documentation
 public interface JOSShortArray extends JOSArray<Short , JOSShortArray>{
 
 	public abstract short[] getPrimitiveValue();
