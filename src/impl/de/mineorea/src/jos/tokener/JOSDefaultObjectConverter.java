@@ -139,6 +139,7 @@ public final class JOSDefaultObjectConverter implements ObjectConverter {
 	
 	@Override
 	public JOSObject<?, ?> doObject(String name, String value) {
+		value = value.trim();
 		if(isObject(name , JOSBoolean.class)){
 			Boolean v = false;
 			if(value == null || value.equalsIgnoreCase(NULL)) 

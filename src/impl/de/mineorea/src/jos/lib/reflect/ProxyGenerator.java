@@ -193,7 +193,7 @@ public final class ProxyGenerator {
 				Long start = System.nanoTime();
 				Object ret = this.handler.invoke(proxy, method, args);
 				Long delay = (System.nanoTime() - start);
-				out.append(" delay: " + delay + "\n");
+				out.append(" delay: " + delay + "ns\n");
 				out.append(" return: " + (ret == null ? null : ret.toString() ) + "\n");
 				System.out.println(out.toString());
 				return ret;
