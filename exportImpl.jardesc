@@ -11,7 +11,7 @@
         </sealing>
     </manifest>
     <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
-        <javaElement handleIdentifier="=JavaObjectStorage/src\/impl"/>
         <javaElement handleIdentifier="=JavaObjectStorage/src\/api"/>
+        <javaElement handleIdentifier="=JavaObjectStorage/src\/impl"/>
     </selectedElements>
 </jardesc>
