@@ -154,9 +154,9 @@ public final class JOSConst {
     	}
     	return name;
     }
-    
-    public static final boolean isObjectInstance(Class<? extends JOSObject<?,?>> master,  Class<?>... childs){
-    	if(master == null || childs == null || childs.length == 0)
+
+    public static final boolean isObjectInstance( Class<?> class1,  Class<?>... clazz){
+    	if(class1 == null || clazz == null || clazz.length == 0)
     		return false;
     	/*Class<?>[] clazzes = master.getInterfaces();
     	for(Class<?> c : clazzes){
@@ -169,8 +169,8 @@ public final class JOSConst {
     		if(c == master)
     			return true;
     	}*/
-    	for(Class<?> c : childs){
-    		if(c.isAssignableFrom(master)){
+    	for(Class<?> c : clazz){
+    		if(c.isAssignableFrom(class1)){
     			return true;
     		}
     	}
@@ -178,7 +178,7 @@ public final class JOSConst {
     }
     
     public static final boolean isObjectInstance(Class<? extends JOSObject<?,?>> clazz, JOSObject<?,?> obj){
-    	return isObjectInstance(clazz, obj.getClass());
+    	return isObjectInstance(obj.getClass(), clazz);
     }
     
     public static final boolean isObjectInstance(Class<? extends JOSObject<?,?>> clazz, String name){
